@@ -161,9 +161,12 @@ function selectReactSelectOption(parent, optionText) {
     reactSelectOption(parent, optionText).click();
 }
 
-function reactSelectOption(parent, optionText) {
+function reactSelectOption(parent, optionText, loose = false) {
     parent.$('.Select-control').click();
-    return parent.$('.Select-option*='+optionText);
+    if (loose) {
+        return  parent.$('.Select-option*='+optionText);
+    }
+    return parent.$('.Select-option='+optionText);
 }
 
 function pasteToElement(elementSelector, text){

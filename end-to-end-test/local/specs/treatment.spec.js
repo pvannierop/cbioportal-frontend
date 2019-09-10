@@ -113,7 +113,7 @@ describe('treatment feature', function() {
                 openHeatmapMenu();
                 selectReactSelectOption( $('.oncoprint__controls__heatmap_menu'), 'IC50 values of compounds on cellular phenotype readout');
                 assert($('div.icon*=17-AAG').isExisting());
-                var selectMenuEntry = reactSelectOption($('.oncoprint__controls__heatmap_menu .treatment-selector'), 'Name of 17-AAG');
+                var selectMenuEntry = reactSelectOption($('.oncoprint__controls__heatmap_menu .treatment-selector'), 'Name of 17-AAG', true);
                 assert(selectMenuEntry.getAttribute('class').includes('is-selected'));
             });
 
