@@ -163,7 +163,7 @@ function selectReactSelectOption(parent, optionText) {
 
 function reactSelectOption(parent, optionText) {
     parent.$('.Select-control').click();
-    return parent.$('.Select-option='+optionText);
+    return parent.$('.Select-option*='+optionText);
 }
 
 function pasteToElement(elementSelector, text){
